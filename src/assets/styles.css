@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    @apply font-importSans p-0 m-0
+}
+
+.all{ 
+    @apply sm:w-full m-auto justify-center md:w-[90%]
+}
+
+.menu_icon{
+    @apply md:hidden w-[80px] ml-4 cursor-pointer
+}
+
+.header{
+    @apply flex flex-row space-x-6 justify-between items-center shadow-md pt-5 pb-7 px-3 
+}
+
+.navlog{
+    @apply flex flex-row space-x-20 items-center
+}
+
+/* NavBar */
+.navopt{
+    @apply sm:hidden md:block space-x-8 -mx-6 text-lg text-left 
+}
+.navopt a{
+    @apply hover:border-myOrange hover:border-b-4 hover:pb-9
+}
+
+/* UserCart Component */
+.user-cart{
+    @apply flex flex-row space-x-8 items-center 
+}
+.user-cart .cart img{
+    @apply cursor-pointer
+}
+.user-cart .avatar{
+    @apply hover:border-2 hover:border-myOrange hover:rounded-full w-fit
+}
+.items_number{
+    @apply text-myWhite bg-myOrange border-myOrange px-2 py-[0.02rem] rounded-lg text-xs font-semibold absolute top-5 ml-2
+}
+
+/* Product Section */
+.product{
+    @apply sm:mt-0 sm:space-x-10 sm:flex-col flex md:flex-row  md:space-x-24 md:mt-20 md:w-[90%] mx-auto 
+}
+.small{
+    @apply md:hidden
+}
+.product_img{
+    @apply flex flex-col flex-wrap
+}
+.main_prod_img{
+    @apply sm:hidden md:block border-none w-[380px] mb-7
+}
+.main_prod_img img{
+    @apply rounded-3xl
+}
+.prod_img_type{
+    @apply sm:hidden md:flex flex-row justify-between items-center
+}
+.prod_img_type img{
+    @apply w-[78px] rounded-xl hover:opacity-50 hover:border-myOrange hover:border-2
+}
+.product_info{
+    @apply sm:mt-8 md:flex-wrap md:w-[40%] md:mt-12 sm:w-[80%]
+}
+.comp_tit{
+    @apply text-myOrange font-semibold text-base
+}
+.prod_info h4{  
+    @apply sm:text-2xl font-bold md:text-4xl text-black mt-3
+}
+.prod_info p{
+    @apply text-[15px] text-myBlack mt-6 sm:w-full md:w-full
+}
+.price_info{
+    @apply sm:w-full md:w-full flex 
+    sm:justify-between
+    md:flex-col
+    sm:items-center
+    md:items-start
+}
+.dis_price{
+    @apply flex space-x-3 items-center mt-2
+}
+.dis_price p{
+    @apply text-black text-2xl
+}
+.dis_price span{
+    @apply bg-myPaleOrange text-myOrange py-[2px] px-1 rounded-md text-xs
+}
+.norm_price{
+    @apply text-gray-300 text-base
+    line-through
+} 
+.prod_selc{
+    @apply flex sm:flex-col 
+    sm:w-[100%] sm:space-y-3
+    md:w-full
+    md:flex-row md:space-x-5 mt-6
+}
+.cart_selec{
+    @apply flex bg-gray-100 space-x-7 py-3 px-3 rounded-lg items-center
+    sm:justify-between
+}
+.cart_selec img{
+    @apply w-3 cursor-pointer
+}
+.cart_selec p{
+    @apply font-semibold
+}
+.add_cart{
+    @apply flex space-x-4 items-center bg-myOrange rounded-lg py-3 px-16 border-none text-myWhite justify-center
+    cursor-pointer hover:opacity-60
+}
+.add_cart img{
+    @apply w-3 h-3
+}
+
+/****** Product Modal********/
+.page_bg{
+    @apply fixed top-0 left-0 h-screen w-screen bg-gray-400  opacity-70
+}
+.prods_section{
+    @apply absolute inset-0 z-30
+}
+.slide_prod{
+    @apply m-auto w-[30%] mt-[12%] z-30
+}
+.slides{
+    @apply flex items-center 
+}
+.modal_close{
+    @apply flex justify-end items-center mx-[6%] mb-3 cursor-pointer
+}
+.prod_img{
+    @apply w-[90%] border-none rounded-xl mx-auto
+}
+.dir{
+    @apply bg-myWhite rounded-full z-50 border-none p-2 items-center cursor-pointer absolute mx-auto 
+}
+.dir_img{
+    @apply w-[15px] h-[15px]
+}
+.next{
+    right: 1%
+}
+.prev{
+    left: 2%
+}
+
+ .small_dir{
+    top:40%;
+    position: absolute;
+    @apply z-30 flex items-center space-x-[78vw]
+}
+.arrow{
+    @apply border-none p-1 rounded-full w-[30px] h-[30px] bg-myWhite
+}
+.small .mobileimg{
+    @apply w-[100vw]
+}
+.small_prev{
+    @apply ml-2
+} 
+
+/* Cart Section */
+.cart_box{
+    top: 5.7em;
+    left: 1.5em;
+    @apply sm:w-[90%] z-30 border-none shadow-lg absolute bg-myWhite h-fit py-6 rounded-lg md:w-[22%] md:inset-x-[72%] md:inset-y-[12%]
+}
+.cart_head{
+    @apply text-myBlack font-bold border-b-[0.5px] px-4 pt-3 pb-3
+}
+.cart_body{
+    @apply flex items-center pt-4 md:space-x-2 px-4 sm:space-x-8 w-[95%] mx-auto
+}
+.cart_body img{
+    @apply w-12
+}
+.item_name{
+    @apply text-sm
+}
+.item_total{
+    @apply font-bold text-base
+}
+.cart_remove{
+    @apply w-3 cursor-pointer
+}
+.empty_cart{
+    @apply text-center m-auto my-3
+}
+/* .check{
+    @apply px-2 items-center
+} */
+.cart_check{
+    @apply bg-myOrange border-none rounded-md w-[85%] cursor-pointer text-myWhite text-sm py-2 text-center mt-3 mx-auto
+}
+.navbar{
+    left: -80px;
+    @apply fixed inset-y-0  bg-myWhite z-50 items-center w-[65%] h-[100vh]
+}
+.mobile_nav{
+    @apply flex flex-col space-y-8 text-left pl-6 font-semibold text-xl
+}
+.mobile_nav img{
+    @apply w-4 mt-[1em] cursor-pointer
+}
+
+/**** Footer ****/
+.attribution{
+    @apply text-center text-[0.75rem] mt-16 mb-2 italic 
+}
+.cLink{
+    @apply text-myOrange
+}

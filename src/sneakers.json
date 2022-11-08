@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Fall Limited Edition Sneaker",
+    "price": "150.00",
+    "image": {
+      "file": { "url": "./assets/images/image-product-1.jpg" },
+      "thumbnail": { "url": "@/assets/images/image-product-1-thumbnail.jpg"}
+    }
+  }
+]
