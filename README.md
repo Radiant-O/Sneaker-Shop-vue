@@ -1,5 +1,5 @@
 # Sneaker Shop
-## Made with Vuejs3 and Tailwind
+## Made with Vuejs3, Tailwind and SwiperJs
 
 ### It is a Product Page and Add to Cart is responding
 
