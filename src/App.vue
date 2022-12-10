@@ -14,29 +14,19 @@
       </div>
 
       <!-- Cart and UserAvartar -->
-      <UserCart 
-      :togcart="toggleCart"
-      :goodsTotal="goodsTotal"/>
+      <UserCart :togcart="toggleCart" :goodsTotal="goodsTotal" />
     </header>
     <section class="body">
-      <Product 
-      v-for="(item, index) in goods"
-      :index="index"
-      :item="item"
-      :key="item.id"
-      :addToCart="addToCart"/>
+      <Product
+        v-for="(item, index) in goods"
+        :index="index"
+        :item="item"
+        :key="item.id"
+        :addToCart="addToCart"/>
     </section>
   </section>
-  
-  <Cart 
-  v-if="cart"
-  :goods="goods"
-  :cartItem="cartItem"
-  :remove="removeItem"
-  />
 
-  
-
+  <Cart v-if="cart" :goods="goods" :cartItem="cartItem" :remove="removeItem"/>
 </template>
 
 <script>
@@ -46,16 +36,15 @@ import Product from "./views/Product.vue";
 import Cart from "./components/cart.vue";
 
 //Product Json
-import sneakers from "@/sneakers.json"
-
+import sneakers from "@/sneakers.json";
 
 export default {
   components: {
     Navbar,
     UserCart,
     Product,
-    Cart
-},
+    Cart,
+  },
 
   data() {
     return {
@@ -66,28 +55,28 @@ export default {
       //itemNumber: 0,
     };
   },
-  computed:{
-    goodsTotal(){
+  computed: {
+    goodsTotal() {
       return Object.values(this.cartItem).reduce((acc, curr) => {
         return acc + curr;
       }, 0);
-    }
+    },
   },
   methods: {
-    toggleCart(){
-      this.cart = !this.cart
+    toggleCart() {
+      this.cart = !this.cart;
     },
-    menuBar(){
-      this.menu = !this.menu
+    menuBar() {
+      this.menu = !this.menu;
     },
-    addToCart(name, quantity){
-      if(!this.cartItem[name]) this.cartItem[name] = 0;
+    addToCart(name, quantity) {
+      if (!this.cartItem[name]) this.cartItem[name] = 0;
       this.cartItem[name] += quantity;
-      this.itemNumber = 0
+      this.itemNumber = 0;
     },
-    removeItem(name){
-      delete this.cartItem[name]
-    }
+    removeItem(name) {
+      delete this.cartItem[name];
+    },
   },
 };
 </script>

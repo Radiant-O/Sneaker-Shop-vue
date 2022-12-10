@@ -1,4 +1,4 @@
-<!-- <template> -->
+<template> 
   <section class="product">
     <div class="product_img">
    
@@ -41,7 +41,7 @@
             <img @click="sub" src="@/assets/icons/icon-minus.svg" alt="" />
           </div>
 
-          <p>{{itemNumber}}</p>
+          <p>{{ itemNumber }}</p>
           <div class="img">
             <img @click="add" src="@/assets/icons/icon-plus.svg" alt="" />
           </div>

@@ -1,4 +1,10 @@
-# calc
+# Sneaker Shop
+## Made with Vuejs3 and Tailwind
+
+### It is a Product Page and Add to Cart is responding
+
+![Cart](productpageCart.png)
+![ProductPage](productpage.png)
 
 ## Project setup
 ```
